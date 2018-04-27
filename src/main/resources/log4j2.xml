@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is 'verbose' config used for dev and qa. It is located so it would 
+be loaded by log4j by default if nothing else is specified -->
+<Configuration status="WARN" monitorInterval='5'>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d [${hostName}] [%t] %-5p:%C:%L - %m%n" />
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console" />
+        </Root>
+    </Loggers>
+</Configuration>

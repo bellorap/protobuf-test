@@ -1,0 +1,8 @@
+server:
+  port: 8000
+
+homer:
+  jetty:
+    min-threads: 8 # Jetty default
+    max-threads: 1000
+    idle-timeout: 60000 # Jetty default
