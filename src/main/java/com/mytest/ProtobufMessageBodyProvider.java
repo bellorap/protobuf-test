@@ -16,9 +16,6 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.ext.MessageBodyReader;
 import javax.ws.rs.ext.MessageBodyWriter;
-import javax.ws.rs.ext.Provider;
-
-import org.springframework.stereotype.Component;
 
 import com.google.protobuf.Message;
 
@@ -28,10 +25,8 @@ import com.google.protobuf.Message;
  * "https://github.com/dropwizard/dropwizard-protobuf/blob/master/src/main/java/io/dropwizard/jersey/protobuf/ProtocolBufferMessageBodyProvider.java">
  * ProtocolBufferMessageBodyProvider</a>.
  */
-@Provider
 @Consumes(ProtobufMessageBodyProvider.MEDIA_TYPE)
 @Produces(ProtobufMessageBodyProvider.MEDIA_TYPE)
-@Component
 public class ProtobufMessageBodyProvider implements MessageBodyReader<Message>, MessageBodyWriter<Message> {
     
     public static final String MEDIA_TYPE = "application/x-protobuf";
